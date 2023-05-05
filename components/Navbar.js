@@ -85,12 +85,15 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
+                <Link href='/'>
               <Image
                 src="/../public/assets/logo.png"
                 width="125"
                 height="75"
                 alt="logo"
               ></Image>
+
+                </Link>
               <div
                 onClick={handleClick}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -105,19 +108,19 @@ const Navbar = () => {
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
               <Link href="/">
-                <li className="py-4 text-sm">Home</li>
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">Home</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">About</li>
+              <Link href="/#about">
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">About</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">Skills</li>
+              <Link href="/#skills">
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">Skills</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">Projects</li>
+              <Link href="/#projects">
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">Projects</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">Contact</li>
+              <Link href="/#contacts">
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">Contact</li>
               </Link>
             </ul>
             <div className="pt-40">
