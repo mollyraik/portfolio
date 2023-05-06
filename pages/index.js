@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Navbar from "../components/Navbar";
@@ -14,12 +14,9 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Molly Raik | Full-Stack Developer</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Full-stack developer portfolio for Molly Raik"
-        />
+        <title>Molly Raik</title>
+        <link rel="icon" href="/assets/logo.png" />
+        <meta name="description" content="Molly Raik's software developer portfolio website" />
       </Head>
       <Navbar />
       <Main />
