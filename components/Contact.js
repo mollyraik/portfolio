@@ -7,34 +7,33 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 const Contact = () => {
-  const [submitterName, setSubmitterName] = useState("");
-  const router = useRouter();
-  let confirmationScreenVisible =
-    router.query?.success && router.query.success === "true";
-  let formVisible = !confirmationScreenVisible;
+  // const [submitterName, setSubmitterName] = useState("");
+  // const router = useRouter();
+  // let confirmationScreenVisible =
+  //   router.query?.success && router.query.success === "true";
+  // let formVisible = !confirmationScreenVisible;
 
-  const ConfirmationMessage = (
-    <>
-      <p className="">
-        Thank you for reaching out. I look forward to connecting with you soon!
-      </p>
+  // const ConfirmationMessage = (
+  //   <>
+  //     <p className="">
+  //       Thank you for reaching out. I look forward to connecting with you soon!
+  //     </p>
 
-      <button
-        className="w-full p-4 text-gray-100 mt-4 font-semibold bg-[#AFD6DF] rounded-lg hover:bg-[#8FC9CB] ease-in duration-300]"
-        onClick={() => router.replace("/#contact", undefined, { shallow: true })}
-      >
-        {" "}
-        Submit Another Response{" "}
-      </button>
-    </>
-  );
+  //     <button
+  //       className="w-full p-4 text-gray-100 mt-4 font-semibold bg-[#AFD6DF] rounded-lg hover:bg-[#8FC9CB] ease-in duration-300]"
+  //       onClick={() => router.replace("/#contact", undefined, { shallow: true })}
+  //     >
+  //       {" "}
+  //       Submit Another Response{" "}
+  //     </button>
+  //   </>
+  // );
 
   const ContactForm = (
     <form
       className="flex flex-col"
       method="POST"
       name="contact-form"
-      action="/#contact?success=true"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       netlify
@@ -49,7 +48,7 @@ const Contact = () => {
         <div className="flex flex-col">
           <label
             className="uppercase text-sm py-2"
-            onChange={(e) => setSubmitterName(e.target.value)}
+            // onChange={(e) => setSubmitterName(e.target.value)}
             htmlFor="name"
           >
             Name
@@ -151,7 +150,7 @@ const Contact = () => {
           </div>
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              {formVisible ? ContactForm : ConfirmationMessage}
+              {ContactForm}
             </div>
           </div>
         </div>
