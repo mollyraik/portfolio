@@ -37,12 +37,8 @@ const Contact = () => {
       action="/#contact?success=true"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      netlify
     >
-      <input
-        type="hidden"
-        name="form-name"
-        value={`You've got mail from ${submitterName}`}
-      />
       <input type="hidden" name="form-name" value="contact-form" />
       <p hidden>
         <label>
