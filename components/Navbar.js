@@ -5,10 +5,31 @@ import { useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import logo from "../public/assets/logo.png";
+import { useRouter } from "next/router";
+// import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState("#AFD6DF");
+  const [navText, setNavText] = useState("#000000");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (
+      router.asPath === "/downtomatch" ||
+      router.asPath === "/classfolio" ||
+      router.asPath === "/formula1v1" ||
+      router.asPath === "/willibelate"
+    ) {
+      setNavBg("transparent");
+      setNavText("white");
+    } else {
+      setNavBg("#AFD6DF");
+      setNavText("#1f2937");
+    }
+  }, [router]);
 
   const handleClick = () => {
     setOpen(!open);
@@ -27,40 +48,36 @@ const Navbar = () => {
 
   return (
     <div
+      style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100]"
           : "fixed w-full h-20 z-[100]"
       }
     >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 bg-[#AFD6DF]">
-        <Link href="/">
-          <Image
-            src="/../public/assets/logo.png"
-            width="125"
-            height="75"
-            alt="logo"
-          />
+      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+        <Link href='/#home' scroll={false}>
+          <Image src={logo} alt="logo" width={150} />
         </Link>
         <div>
-          <ul className="hidden md:flex">
-            <Link href="/">
+          <ul style={{ color: `${navText}` }} className="hidden md:flex">
+            <Link href="/#home" scroll={false}>
               <li className="ml-10 text-sm uppercase hover: border-b">Home</li>
             </Link>
-            <Link href="/#about">
+            <Link href="/#about" scroll={false}>
               <li className="ml-10 text-sm uppercase hover: border-b">About</li>
             </Link>
-            <Link href="/#skills">
+            <Link href="/#skills" scroll={false}>
               <li className="ml-10 text-sm uppercase hover: border-b">
                 Skills
               </li>
             </Link>
-            <Link href="/#projects">
+            <Link href="/#projects" scroll={false}>
               <li className="ml-10 text-sm uppercase hover: border-b">
                 Projects
               </li>
             </Link>
-            <Link href="/#contact">
+            <Link href="/#contact" scroll={false}>
               <li className="ml-10 text-sm uppercase hover: border-b">
                 Contact
               </li>
@@ -85,15 +102,9 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-                <Link href='/'>
-              <Image
-                src="/../public/assets/logo.png"
-                width="125"
-                height="75"
-                alt="logo"
-              ></Image>
-
-                </Link>
+              <Link href="/" scroll={false}>
+                <Image src={logo} width={150} alt="logo"></Image>
+              </Link>
               <div
                 onClick={handleClick}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -107,39 +118,47 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/">
-                <li onClick={() => setOpen(false)} className="py-4 text-sm">Home</li>
+              <Link href="/" scroll={false}>
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">
+                  Home
+                </li>
               </Link>
-              <Link href="/#about">
-                <li onClick={() => setOpen(false)} className="py-4 text-sm">About</li>
+              <Link href="/#about" scroll={false}>
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">
+                  About
+                </li>
               </Link>
-              <Link href="/#skills">
-                <li onClick={() => setOpen(false)} className="py-4 text-sm">Skills</li>
+              <Link href="/#skills" scroll={false}>
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">
+                  Skills
+                </li>
               </Link>
-              <Link href="/#projects">
-                <li onClick={() => setOpen(false)} className="py-4 text-sm">Projects</li>
+              <Link href="/#projects" scroll={false}>
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">
+                  Projects
+                </li>
               </Link>
-              <Link href="/#contacts">
-                <li onClick={() => setOpen(false)} className="py-4 text-sm">Contact</li>
+              <Link href="/#contact" scroll={false}>
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">
+                  Contact
+                </li>
               </Link>
             </ul>
             <div className="pt-40">
               <p className="uppercase tracking-widest text-white font-semibold">
                 Let's Connect
               </p>
-              <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+              <div className="flex items-center my-4 w-full sm:w-[80%]">
+                <a href="https://www.linkedin.com/in/mollyraik/" target="_blank">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 mx-3">
                   <FaLinkedin size={25} />
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                </a>
+                <a href="https://github.com/mollyraik" target="_blank">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 mx-3">
                   <FaGithub size={25} />
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <AiOutlineMail size={25} />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <BsFillPersonLinesFill size={25} />
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -150,3 +169,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
