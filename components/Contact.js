@@ -3,10 +3,120 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 const Contact = () => {
+  const [submitterName, setSubmitterName] = useState("");
+  const router = useRouter();
+  let confirmationScreenVisible =
+    router.query?.success && router.query.success === "true";
+  let formVisible = !confirmationScreenVisible;
+
+  const ConfirmationMessage = (
+    <>
+      <p className="">
+        Thank you for reaching out. I look forward to connecting with you soon!
+      </p>
+
+      <button
+        className="w-full p-4 text-gray-100 mt-4 font-semibold bg-[#AFD6DF] rounded-lg hover:bg-[#8FC9CB] ease-in duration-300]"
+        onClick={() => router.replace("/#contact", undefined, { shallow: true })}
+      >
+        {" "}
+        Submit Another Response{" "}
+      </button>
+    </>
+  );
+
+  const ContactForm = (
+    <form
+      className="flex flex-col"
+      method="POST"
+      name="contact-form"
+      action="/#contact?success=true"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input
+        type="hidden"
+        name="form-name"
+        value={`You've got mail from ${submitterName}`}
+      />
+      <input type="hidden" name="form-name" value="contact-form" />
+      <p hidden>
+        <label>
+          Don’t fill this out: <input name="bot-field" />
+        </label>
+      </p>
+      <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+        <div className="flex flex-col">
+          <label
+            className="uppercase text-sm py-2"
+            onChange={(e) => setSubmitterName(e.target.value)}
+            htmlFor="name"
+          >
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            required
+            type="text"
+            className="border-2 rounded-lg p-3 flex border-gray-300"
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="number" className="uppercase text-sm py-2">Phone Number</label>
+          <input
+            type="text"
+            id="number"
+            name="number"
+            className="border-2 rounded-lg p-3 flex border-gray-300"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col py-2">
+        <label htmlFor="email" className="uppercase text-sm py-2">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          className="border-2 rounded-lg p-3 flex border-gray-300"
+        />
+      </div>
+      <div className="flex flex-col py-2">
+        <label htmlFor="subject" className="uppercase text-sm py-2">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          className="border-2 rounded-lg p-3 flex border-gray-300"
+        />
+      </div>
+      <div className="flex flex-col py-2">
+        <label htmlFor="message" className="uppercase text-sm py-2">Message</label>
+        <textarea
+          type="text"
+          id="message"
+          name="message"
+          required
+          rows={10}
+          className="border-2 rounded-lg p-3 flex border-gray-300"
+        />
+      </div>
+      <button
+        type="submit"
+        className="w-full p-4 text-gray-100 mt-4 font-semibold bg-[#AFD6DF] rounded-lg hover:bg-[#8FC9CB] ease-in duration-300]"
+      >
+        Send Message
+      </button>
+    </form>
+  );
+
   return (
-    <div id="contact" className="w-full lg:h-screen">
+    <div id="contact" className="w-full lg:h-screen py-16">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#AFD6DF]">
           Contact
@@ -32,18 +142,12 @@ const Contact = () => {
               </div>
               <div>
                 <p className="uppercase pt-8">Connect With Me</p>
-                <div className="flex items-center justify-between py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <div className="flex items-center py-4">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 mr-6">
                     <FaLinkedin size={25} />
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <FaGithub size={25} />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <AiOutlineMail size={25} />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <BsFillPersonLinesFill size={25} />
                   </div>
                 </div>
               </div>
@@ -51,42 +155,21 @@ const Contact = () => {
           </div>
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-                <form className="flex flex-col">
-                    <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                        <div className="flex flex-col">
-                            <label className="uppercase text-sm py-2" >Name</label>
-                            <input type="text" className="border-2 rounded-lg p-3 flex border-gray-300"/>
-                        </div>
-                        <div className="flex flex-col">
-                            <label className="uppercase text-sm py-2" >Phone Number</label>
-                            <input type="text" className="border-2 rounded-lg p-3 flex border-gray-300"/>
-                        </div>
-                    </div>
-                    <div className="flex flex-col py-2">
-                        <label className="uppercase text-sm py-2" >Email</label>
-                        <input type="email" className="border-2 rounded-lg p-3 flex border-gray-300"/>
-                    </div>
-                    <div className="flex flex-col py-2">
-                        <label className="uppercase text-sm py-2" >Subject</label>
-                        <input type="text" className="border-2 rounded-lg p-3 flex border-gray-300"/>
-                    </div>
-                    <div className="flex flex-col py-2">
-                        <label className="uppercase text-sm py-2" >Message</label>
-                        <textarea type="text" rows={10} className="border-2 rounded-lg p-3 flex border-gray-300"/>
-                    </div>
-                    <button className="w-full p-4 text-gray-100 mt-4 font-semibold">Send Message</button>
-                </form>
+              {formVisible ? ContactForm : ConfirmationMessage}
             </div>
+          </div>
+        </div>
+        <div className="flex justify-center py-12">
+          <Link href="/">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#AFD6DF]">
+              <HiOutlineChevronDoubleUp
+                className="m-auto text-[white]"
+                size={30}
+              />
+            </div>
+          </Link>
         </div>
       </div>
-      <div className="flex justify-center py-12">
-        <Link href='/'>
-        <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <HiOutlineChevronDoubleUp className="m-auto text-[#5651e5]" size={30} />
-            </div>
-        </Link>
-      </div>
-    </div>
     </div>
   );
 };
