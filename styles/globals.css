@@ -12,7 +12,7 @@ body {
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f293z] tracking-wide;
+    @apply bg-[#fffffe] dark:bg-[#0f0e17] text-[#0f0e17] dark:text-[#fffffe] tracking-wide;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -32,6 +32,6 @@ body {
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-[#AFD6DF] text-white font-semibold
+    @apply shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-xl uppercase text-white font-semibold
   }
 }
