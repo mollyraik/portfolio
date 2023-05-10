@@ -36,7 +36,7 @@ const Contact = () => {
             name="name"
             required
             type="text"
-            className="border-2 rounded-lg p-3 flex border-gray-300"
+            className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700"
           />
         </div>
         <div className="flex flex-col">
@@ -45,7 +45,7 @@ const Contact = () => {
             type="text"
             id="number"
             name="number"
-            className="border-2 rounded-lg p-3 flex border-gray-300"
+            className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
           />
         </div>
       </div>
@@ -56,7 +56,7 @@ const Contact = () => {
           id="email"
           name="email"
           required
-          className="border-2 rounded-lg p-3 flex border-gray-300"
+          className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
         />
       </div>
       <div className="flex flex-col py-2">
@@ -65,7 +65,7 @@ const Contact = () => {
           type="text"
           id="subject"
           name="subject"
-          className="border-2 rounded-lg p-3 flex border-gray-300"
+          className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
         />
       </div>
       <div className="flex flex-col py-2">
@@ -76,12 +76,12 @@ const Contact = () => {
           name="message"
           required
           rows={10}
-          className="border-2 rounded-lg p-3 flex border-gray-300"
+          className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
         />
       </div>
       <button
         type="submit"
-        className="w-full p-4 text-gray-100 mt-4 font-semibold bg-[#AFD6DF] rounded-lg hover:bg-[#8FC9CB] ease-in duration-300]"
+        className="w-full p-4 text-gray-100 mt-4 font-semibold bg-pink rounded-lg hover:scale-105 ease-in duration-300"
       >
         Send Message
       </button>
@@ -91,13 +91,13 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen py-16">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className="text-xl tracking-widest uppercase text-[#AFD6DF]">
+        <p className="text-xl tracking-widest uppercase text-pink">
           Contact
         </p>
         <h2 className="py-4">Get in Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
-            <div className="lg:p-4 h-full rounded-xl">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4 border-2 border-peach">
+            <div className="lg:p-4 h-full rounded-xl ">
               <div>
                 <img
                   className="rounded-xl hover:scale-105 ease-in duration-300"
@@ -106,7 +106,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2">Molly Raik</h2>
+                <h2 className="py-2 text-pink">Molly Raik</h2>
                 <p>Software Developer</p>
                 <p className="py-4">
                   I am available for freelance or full-time postions. Let's
@@ -114,19 +114,19 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <p className="uppercase pt-8">Connect With Me</p>
+                <p className="uppercase tracking-widest pt-8">Let's Connect</p>
                 <div className="flex items-center py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 mr-6">
+                  <div className="rounded-full shadow-md shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:bg-orange hover:scale-110 ease-in duration-300 mr-6">
                     <FaLinkedin size={25} />
                   </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <div className="rounded-full shadow-md shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 hover:bg-orange ease-in duration-300">
                     <FaGithub size={25} />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl lg:p-4 border-2 border-peach">
             <div className="p-4">
               {ContactForm}
             </div>
@@ -134,7 +134,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link href="/#home" scroll={false}>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#AFD6DF]">
+            <div className="rounded-full shadow-lg shadow-gray-400  dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-peach">
               <HiOutlineChevronDoubleUp
                 className="m-auto text-[white]"
                 size={30}

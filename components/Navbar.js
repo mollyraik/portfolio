@@ -12,8 +12,8 @@ import { useRouter } from "next/router";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#AFD6DF");
-  const [navText, setNavText] = useState("#000000");
+  const [navBg, setNavBg] = useState("#f25f4c");
+  const [navText, setNavText] = useState("white");
   const router = useRouter();
 
   useEffect(() => {
@@ -26,8 +26,8 @@ const Navbar = () => {
       setNavBg("transparent");
       setNavText("white");
     } else {
-      setNavBg("#AFD6DF");
-      setNavText("#1f2937");
+      setNavBg("#f25f4c");
+      setNavText("white");
     }
   }, [router]);
 
@@ -96,7 +96,7 @@ const Navbar = () => {
         <div
           className={
             open
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md-[45%] h-screen bg-[#AFD6DF] p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md-[45%] h-screen bg-peach p-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
@@ -107,18 +107,18 @@ const Navbar = () => {
               </Link>
               <div
                 onClick={handleClick}
-                className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                className="rounded-full shadow-lg shadow-white hover:bg-[#0f0e17] p-3 cursor-pointer"
               >
-                <AiOutlineClose size={25} />
+                <AiOutlineClose size={25} color='white' />
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">Something cool to say</p>
+            <div className="border-b border-white my-4">
+              <p className="w-[85%] md:w-[90%] py-4 text-white"></p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
-            <ul className="uppercase">
-              <Link href="/" scroll={false}>
+            <ul className="uppercase text-white">
+              <Link href="/#home" scroll={false}>
                 <li onClick={() => setOpen(false)} className="py-4 text-sm">
                   Home
                 </li>
@@ -144,19 +144,19 @@ const Navbar = () => {
                 </li>
               </Link>
             </ul>
-            <div className="pt-40">
+            <div className="pt-6">
               <p className="uppercase tracking-widest text-white font-semibold">
                 Let's Connect
               </p>
               <div className="flex items-center my-4 w-full sm:w-[80%]">
                 <a href="https://www.linkedin.com/in/mollyraik/" target="_blank">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 mx-3">
-                  <FaLinkedin size={25} />
+                <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:bg-[#0f0e17] hover:scale-105 ease-in duration-300 mx-3">
+                  <FaLinkedin size={25} color='white'/>
                 </div>
                 </a>
                 <a href="https://github.com/mollyraik" target="_blank">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 mx-3">
-                  <FaGithub size={25} />
+                <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:bg-[#0f0e17] hover:scale-105 ease-in duration-300 mx-3">
+                  <FaGithub size={25} color='white' />
                 </div>
                 </a>
               </div>
