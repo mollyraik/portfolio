@@ -15,7 +15,7 @@ const Contact = () => {
       data-netlify="true"
       action='/success'
       data-netlify-honeypot="bot-field"
-      netlify
+      // netlify
     >
       <input type="hidden" name="form-name" value="contact-form" />
       <p hidden>
@@ -95,8 +95,8 @@ const Contact = () => {
           Contact
         </p>
         <h2 className="py-4">Get in Touch</h2>
-        <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4 border-2 border-peach">
+        <div className="grid md:grid-cols-5 gap-8">
+          <div className="hidden md:inline lg:inline col-span-3 md:col-span-2 w-full h-full shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4 border-2 border-peach">
             <div className="lg:p-4 h-full rounded-xl ">
               <div>
                 <img

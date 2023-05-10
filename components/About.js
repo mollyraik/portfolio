@@ -5,7 +5,7 @@ import molly from "../public/assets/molly1.png";
 const About = () => {
   return (
     <div id="about" className="w-full md:h-screen p-2 flex items-center py-16 relative mt-5">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
+      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 py-8">
       <div className="w-full h-auto m-auto shadow-lg shadow-gray-100 dark:shadow-gray-600 rounded-xl border-2 border-peach flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
           <Image
             src={molly}
@@ -15,7 +15,7 @@ const About = () => {
           ></Image>
         </div>
         <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-pink">
+          <p className="uppercase text-xl tracking-widest text-pink mt-4">
             About
           </p>
           <h2 className="py-4 ">Who I Am</h2>
