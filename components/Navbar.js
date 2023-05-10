@@ -8,6 +8,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import logo from "../public/assets/logo.png";
 import { useRouter } from "next/router";
 // import { Link as ScrollLink } from "react-scroll";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -15,6 +16,17 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState("#f25f4c");
   const [navText, setNavText] = useState("white");
   const router = useRouter();
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
 
   useEffect(() => {
     if (
@@ -56,7 +68,7 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href='/#home' scroll={false}>
+        <Link href="/#home" scroll={false}>
           <Image src={logo} alt="logo" width={150} />
         </Link>
         <div>
@@ -82,10 +94,26 @@ const Navbar = () => {
                 Contact
               </li>
             </Link>
+          <li className="ml-10 mr-4">
+            {darkMode ? (
+              <BsFillSunFill onClick={toggleDarkMode} />
+            ) : (
+              <BsFillMoonStarsFill onClick={toggleDarkMode} />
+            )}
+          </li>
           </ul>
-          <div onClick={handleClick} className="md:hidden">
+          <ul className="flex md:hidden">
+            <li onClick={handleClick} className="ml-8">
             <AiOutlineMenu size={25} />
-          </div>
+            </li>
+            <li className="ml-8 mr-4">
+            {darkMode ? (
+              <BsFillSunFill onClick={toggleDarkMode} size={25} />
+            ) : (
+              <BsFillMoonStarsFill onClick={toggleDarkMode} size={25} />
+            )}
+            </li>
+          </ul>
         </div>
       </div>
       <div
@@ -109,7 +137,7 @@ const Navbar = () => {
                 onClick={handleClick}
                 className="rounded-full shadow-lg shadow-white hover:bg-[#0f0e17] p-3 cursor-pointer"
               >
-                <AiOutlineClose size={25} color='white' />
+                <AiOutlineClose size={25} color="white" />
               </div>
             </div>
             <div className="border-b border-white my-4">
@@ -149,15 +177,18 @@ const Navbar = () => {
                 Let's Connect
               </p>
               <div className="flex items-center my-4 w-full sm:w-[80%]">
-                <a href="https://www.linkedin.com/in/mollyraik/" target="_blank">
-                <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:bg-[#0f0e17] hover:scale-105 ease-in duration-300 mx-3">
-                  <FaLinkedin size={25} color='white'/>
-                </div>
+                <a
+                  href="https://www.linkedin.com/in/mollyraik/"
+                  target="_blank"
+                >
+                  <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:bg-[#0f0e17] hover:scale-105 ease-in duration-300 mx-3">
+                    <FaLinkedin size={25} color="white" />
+                  </div>
                 </a>
                 <a href="https://github.com/mollyraik" target="_blank">
-                <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:bg-[#0f0e17] hover:scale-105 ease-in duration-300 mx-3">
-                  <FaGithub size={25} color='white' />
-                </div>
+                  <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:bg-[#0f0e17] hover:scale-105 ease-in duration-300 mx-3">
+                    <FaGithub size={25} color="white" />
+                  </div>
                 </a>
               </div>
             </div>
@@ -169,5 +200,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
