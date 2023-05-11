@@ -36,36 +36,36 @@ const Contact = () => {
             name="name"
             required
             type="text"
-            className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700"
+            className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 text-black"
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="number" className="uppercase text-sm py-2">Phone Number</label>
+          <label htmlFor="number" className="uppercase text-sm py-2 ">Phone Number</label>
           <input
             type="text"
             id="number"
             name="number"
-            className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
+            className="border-2 rounded-lg p-3 flex border-gray-300 text-black dark:border-gray-700"
           />
         </div>
       </div>
       <div className="flex flex-col py-2">
-        <label htmlFor="email" className="uppercase text-sm py-2">Email</label>
+        <label htmlFor="email" className="uppercase text-sm py-2 ">Email</label>
         <input
           type="email"
           id="email"
           name="email"
           required
-          className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
+          className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700 text-black"
         />
       </div>
       <div className="flex flex-col py-2">
-        <label htmlFor="subject" className="uppercase text-sm py-2">Subject</label>
+        <label htmlFor="subject" className="uppercase text-sm py-2 ">Subject</label>
         <input
           type="text"
           id="subject"
           name="subject"
-          className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
+          className="border-2 rounded-lg p-3 flex border-gray-300 text-black dark:border-gray-700"
         />
       </div>
       <div className="flex flex-col py-2">
@@ -76,7 +76,7 @@ const Contact = () => {
           name="message"
           required
           rows={10}
-          className="border-2 rounded-lg p-3 flex border-gray-300  dark:border-gray-700"
+          className="border-2 rounded-lg p-3 flex border-gray-300 text-black dark:border-gray-700"
         />
       </div>
       <button
