@@ -21,43 +21,71 @@ const willibelate = () => {
           <h3>Django / Python</h3>
         </div>
       </div>
-      <div className="max-w-[1240px mx-auto p-2 grid md:grid-cols-3 gap-8 pt-8">
-        <div className="col-span-2">
+      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-3 lg:grid-cols-5 gap-8 pt-8">
+        <div className="md:col-span-2 lg:col-span-3">
           <p className="text-xl tracking-widest uppercase text-pink">Project</p>
           <h2 className="py-4">Overview</h2>
           <p className="py-2 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
-            excepturi corrupti possimus animi mollitia commodi totam dolores
-            repudiandae eos? Aut quaerat ipsa aspernatur perferendis et
-            reprehenderit qui fuga cum corrupti.
+            "Will I Be Late?" is a dynamic web app that provides live, real-time
+            train status alerts and upcoming train information using the MTA
+            API. As the developer, I integrated the MTA API to deliver accurate
+            updates to users.
+          </p>
+          <p className="py-2 text-gray-500 dark:text-gray-400">
+            Users can search for subway stops or choose specific subway lines to
+            access relevant train information. The app fetches real-time data
+            from the MTA API, ensuring users have the most current train
+            statuses and arrival times.
+          </p>
+          <p className="py-2 text-gray-500 dark:text-gray-400">
+            Registered users can save favorite stations or lines for easy access
+            to frequently used trains. This personalization feature streamlines
+            checking for train updates and helps users plan their journeys
+            efficiently.
+          </p>
+          <p className="py-2 text-gray-500 dark:text-gray-400">
+            A challenge during development was parsing the GTFS protocol used by
+            the MTA API. To overcome this, I utilized the MTAPI GitHub
+            repository developed by Jon Thornton, which translated GTFS protocol
+            buffers into JSON format, simplifying the extraction and display of
+            MTA train info.
+          </p>
+          <p className="py-2 text-gray-500 dark:text-gray-400">
+            "Will I Be Late?" offers a user-friendly interface, intuitive
+            navigation, and a responsive design. Stay informed and plan your MTA
+            commute effortlessly with this powerful tool.
           </p>
           <a href="http://willibelate.herokuapp.com/" target="_blank">
-          <button className="px-8 py-2 mt-4 mr-8 ml-2 hover:scale-110 ease-in duration-300 bg-peach">Live Project</button>
+            <button className="px-8 py-2 mt-4 mr-8 hover:scale-110 ease-in duration-300 bg-peach">
+              Live Project
+            </button>
           </a>
           <a href="https://github.com/mollyraik/willibelate" target="_blank">
-          <button className="px-8 py-2 mt-4 hover:scale-110 ease-in duration-300 bg-peach">Github Repo</button>
+            <button className="px-8 py-2 mt-4 hover:scale-110 ease-in duration-300 bg-peach">
+              Github Repo
+            </button>
           </a>
         </div>
-        <div className="col-span-1 md:col-span-1 border-2 border-peach shadow-lg shadow-gray-400 dark:shadow-gray-600 rounded-xl p-4">
+        <div className="col-span-4 md:col-span-1 lg:col-span-2 border-2 border-peach shadow-lg shadow-gray-400 dark:shadow-gray-600 rounded-xl p-4">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
-            <div className="grid grid-cols-3 md:grid-cols-1">
-              <p className="text-gray-600 dark:text-gray-400 py-2 flex items-center">
+            <div className="grid grid-cols-2 md:grid-cols-1">
+              <p className="text-gray-600  dark:text-gray-400 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Django
               </p>
-              <p className="text-gray-600 dark:text-gray-400 py-2 flex items-center">
+              <p className="text-gray-600  dark:text-gray-400 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Bootstrap
               </p>
-              <p className="text-gray-600 dark:text-gray-400 py-2 flex items-center">
+              <p className="text-gray-600  dark:text-gray-400 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Python
               </p>
-              <p className="text-gray-600 dark:text-gray-400 py-2 flex items-center">
+              <p className="text-gray-600  dark:text-gray-400 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> PostrgreSQL
               </p>
-              <p className="text-gray-600 dark:text-gray-400 py-2 flex items-center">
+              <p className="text-gray-600  dark:text-gray-400 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> MTA API
               </p>
-              <p className="text-gray-600 dark:text-gray-400 py-2 flex items-center">
+              <p className="text-gray-600  dark:text-gray-400 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Flask
               </p>
             </div>

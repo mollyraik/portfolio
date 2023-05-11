@@ -21,29 +21,50 @@ const downToMatch = () => {
           <h3>React JS / Bootstrap / Firebase / Socket.io </h3>
         </div>
       </div>
-      <div className="max-w-[1240px mx-auto p-2 grid md:grid-cols-3 gap-8 pt-8">
-        <div className="col-span-2">
+      <div className="max-w-[1240px mx-auto p-2 grid md:grid-cols-3 lg:grid-cols-5 gap-8 pt-8">
+        <div className="md:col-span-2 lg:col-span-3">
           <p className="text-xl tracking-widest uppercase text-pink">Project</p>
           <h2 className="py-4">Overview</h2>
           <p className="py-2 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
-            excepturi corrupti possimus animi mollitia commodi totam dolores
-            repudiandae eos? Aut quaerat ipsa aspernatur perferendis et
-            reprehenderit qui fuga cum corrupti.
+            Down to Match (DTM) is a transformative dating web app that aims to
+            foster meaningful connections and move away from swipe culture. As
+            the repo owner and lead developer, I played a crucial role in
+            developing this innovative platform. DTM provides a refreshing
+            dating experience by focusing on compatibility and deep
+            relationships. Users sign up, create profiles, and complete a
+            compatibility quiz. Based on their responses, DTM
+            algorithmically calculates a percentage match for each user,
+            enabling them to discover potential partners who align with their
+            values and preferences.
+          </p>
+          <p className="py-2 text-gray-500 dark:text-gray-400">
+            The platform offers a user-friendly interface for browsing profiles
+            and utilizes Socket.IO to facilitate seamless live chat between
+            matched users. This real-time communication feature enhances user
+            engagement and connection-building. As the lead developer, I
+            prioritized intuitive navigation, responsive design, and robust data
+            management techniques to ensure a smooth user experience. Privacy
+            and data security were paramount, ensuring a safe and confidential
+            environment for users to explore and connect. DTM challenges the
+            norms of traditional dating apps by emphasizing compatibility and
+            genuine connections. Experience a refreshing approach to online
+            dating and discover meaningful connections with DTM.
           </p>
           <a href="https://downtomatch.netlify.app/" target="_blank">
-            <button className="px-8 py-2 mt-4 mr-8 ml-2 hover:scale-110 ease-in duration-300 bg-peach">
+            <button className="px-8 py-2 mt-4 mr-8 hover:scale-110 ease-in duration-300 bg-peach">
               Live Project
             </button>
           </a>
           <a href="https://github.com/mollyraik/dtm-frontend" target="_blank">
-            <button className="px-8 py-2 mt-4 hover:scale-110 ease-in duration-300 bg-peach">Github Repo</button>
+            <button className="px-8 py-2 mt-4 hover:scale-110 ease-in duration-300 bg-peach">
+              Github Repo
+            </button>
           </a>
         </div>
-        <div className="col-span-1 md:col-span-1 border-2 border-peach shadow-lg shadow-gray-400 dark:shadow-gray-600 rounded-xl p-4">
+        <div className="col-span-4 md:col-span-1 lg:col-span-2 border-2 border-peach shadow-lg shadow-gray-400 dark:shadow-gray-600 rounded-xl p-4">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
-            <div className="grid grid-cols-3 md:grid-cols-1">
+            <div className="grid grid-cols-2 md:grid-cols-1">
               <p className="text-gray-600 dark:text-gray-400 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> React
               </p>
