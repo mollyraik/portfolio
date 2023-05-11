@@ -11,7 +11,7 @@ const Main = () => {
             Let's Make Something Awesome
           </p>
           <h1 className="py-4 text-gray-700 dark:text-gray-200">
-            Hi, I'm <span className="text-pink">Molly</span>
+            Hi, I'm <span className="text-pink">Molly Raik</span>
           </h1>
           <h1 className="py-2 text-gray-700 dark:text-gray-200">A Full-Stack Developer</h1>
           <p className="py-4 text-gray-600 dark:text-gray-300 max-w-[70%] m-auto">
