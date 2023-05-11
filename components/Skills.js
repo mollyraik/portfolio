@@ -8,11 +8,13 @@ import nextjs from '../public/assets/skills/nextjs.png';
 import mongo from '../public/assets/skills/mongo.png';
 import github from '../public/assets/skills/github.png';
 // import express from '../public/assets/skills/express.png';
-// import python from '../public/assets/skills/python.png';
-// import django from '../public/assets/skills/django.png';
-// import postgresql from '../public/assets/skills/postgresql.png';
-// import git from '../public/assets/skills/git.png';
+import python from '../public/assets/skills/python.png';
+import django from '../public/assets/skills/django.png';
+import postgresql from '../public/assets/skills/postgresql.png';
+import git from '../public/assets/skills/git.png';
 // import heroku from '../public/assets/skills/heroku.png';
+import bootstrap from '../public/assets/skills/bootstrap.png';
+import tailwind from '../public/assets/skills/tailwind.png';
 
 
 const Skills = () => {
@@ -27,9 +29,17 @@ const Skills = () => {
                     <Skill skill='JavaScript' skillImg={javascript} />
                     <Skill skill='React' skillImg={react} />
                     <Skill skill='Next.js' skillImg={nextjs} />
+                    <Skill skill='Tailwind CSS' skillImg={tailwind} />
                     <Skill skill='Node' skillImg={node} />
                     <Skill skill='MongoDB' skillImg={mongo} />
                     <Skill skill='GitHub' skillImg={github} />
+                    {/* <Skill skill='Express' skillImg={express} /> */}
+                    <Skill skill='Python' skillImg={python} />
+                    <Skill skill='Django' skillImg={django} />
+                    <Skill skill='PostgreSQL' skillImg={postgresql} />
+                    <Skill skill='Git' skillImg={git} />
+                    <Skill skill='Bootstrap' skillImg={bootstrap} />
+                    {/* <Skill skill='Heroku' skillImg={heroku} /> */}
                 </div>
             </div>
         </div>
