@@ -13,7 +13,7 @@ const Contact = () => {
       method="POST"
       name="contact-form"
       data-netlify="true"
-      action='/success'
+      action="/success"
       data-netlify-honeypot="bot-field"
       // netlify
     >
@@ -25,10 +25,7 @@ const Contact = () => {
       </p>
       <div className="grid md:grid-cols-2 gap-4 w-full py-2">
         <div className="flex flex-col">
-          <label
-            className="uppercase text-sm py-2"
-            htmlFor="name"
-          >
+          <label className="uppercase text-sm py-2" htmlFor="name">
             Name
           </label>
           <input
@@ -40,7 +37,9 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="number" className="uppercase text-sm py-2 ">Phone Number</label>
+          <label htmlFor="number" className="uppercase text-sm py-2 ">
+            Phone Number
+          </label>
           <input
             type="text"
             id="number"
@@ -50,7 +49,9 @@ const Contact = () => {
         </div>
       </div>
       <div className="flex flex-col py-2">
-        <label htmlFor="email" className="uppercase text-sm py-2 ">Email</label>
+        <label htmlFor="email" className="uppercase text-sm py-2 ">
+          Email
+        </label>
         <input
           type="email"
           id="email"
@@ -60,7 +61,9 @@ const Contact = () => {
         />
       </div>
       <div className="flex flex-col py-2">
-        <label htmlFor="subject" className="uppercase text-sm py-2 ">Subject</label>
+        <label htmlFor="subject" className="uppercase text-sm py-2 ">
+          Subject
+        </label>
         <input
           type="text"
           id="subject"
@@ -69,7 +72,9 @@ const Contact = () => {
         />
       </div>
       <div className="flex flex-col py-2">
-        <label htmlFor="message" className="uppercase text-sm py-2">Message</label>
+        <label htmlFor="message" className="uppercase text-sm py-2">
+          Message
+        </label>
         <textarea
           type="text"
           id="message"
@@ -91,9 +96,7 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen py-16">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className="text-xl tracking-widest uppercase text-pink">
-          Contact
-        </p>
+        <p className="text-xl tracking-widest uppercase text-pink">Contact</p>
         <h2 className="py-4">Get in Touch</h2>
         <div className="grid md:grid-cols-5 gap-8">
           <div className="hidden md:inline lg:inline col-span-3 md:col-span-2 w-full h-full shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4 border-2 border-peach">
@@ -116,20 +119,25 @@ const Contact = () => {
               <div>
                 <p className="uppercase tracking-widest pt-8">Let's Connect</p>
                 <div className="flex items-center py-4">
-                  <div className="rounded-full shadow-md shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:bg-orange hover:scale-110 ease-in duration-300 mr-6">
-                    <FaLinkedin size={25} />
-                  </div>
-                  <div className="rounded-full shadow-md shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 hover:bg-orange ease-in duration-300">
-                    <FaGithub size={25} />
-                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/mollyraik/"
+                    target="_blank"
+                  >
+                    <div className="rounded-full shadow-md shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:bg-orange hover:scale-110 ease-in duration-300 mr-6">
+                      <FaLinkedin size={25} />
+                    </div>
+                  </a>
+                  <a href="https://github.com/mollyraik" target="_blank">
+                    <div className="rounded-full shadow-md shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 hover:bg-orange ease-in duration-300">
+                      <FaGithub size={25} />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl lg:p-4 border-2 border-peach">
-            <div className="p-4">
-              {ContactForm}
-            </div>
+            <div className="p-4">{ContactForm}</div>
           </div>
         </div>
         <div className="flex justify-center py-12">
