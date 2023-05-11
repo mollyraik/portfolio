@@ -35,7 +35,7 @@ const Navbar = () => {
       router.asPath === "/formula1v1" ||
       router.asPath === "/willibelate"
     ) {
-      setNavBg("transparent");
+      setNavBg("#f25f4c");
       setNavText("white");
     } else {
       setNavBg("#f25f4c");
@@ -94,6 +94,12 @@ const Navbar = () => {
                 Contact
               </li>
             </Link>
+            <Link href="/assets/MollyRaikResume.pdf" target="_blank" download>
+              <li className="ml-10 text-sm uppercase hover: border-b">
+                Resume
+              </li>
+            </Link>
+
           <li className="ml-10 mr-4">
             {darkMode ? (
               <BsFillSunFill onClick={toggleDarkMode} />
@@ -171,6 +177,11 @@ const Navbar = () => {
                   Contact
                 </li>
               </Link>
+              <a href="/assets/MollyRaikResume.pdf" download>
+                <li onClick={() => setOpen(false)} className="py-4 text-sm">
+                  Resume
+                </li>
+              </a>
             </ul>
             <div className="pt-6">
               <p className="uppercase tracking-widest text-white font-semibold">
