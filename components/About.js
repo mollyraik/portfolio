@@ -22,7 +22,7 @@ const About = () => {
             About
           </p>
           <h2 className="py-4 ">Who I Am</h2>
-          <p className="py-2 text-gray-00 dark:text-gray-300">
+          <p className="py-2 text-gray-600 dark:text-gray-300">
             Hey there! 👋 I'm Molly, a software developer and former teacher
             with a passion for education and technology. I've taught
             kindergarten and worked as a learning specialist, where I honed my
