@@ -1,10 +1,17 @@
 import Image from "next/image";
+import Head from "next/head";
 import dtm from "../public/assets/projects/dtm.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
 const downToMatch = () => {
   return (
+    <>
+    <Head>
+        <title>Down to Match</title>
+        <link rel="icon" href="/assets/favico.png" />
+        <meta name="description" content="Project description for Down to Match from Molly Raik's software developer portfolio website" />
+    </Head>
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 dark:bg-black/50 z-10"></div>
@@ -100,6 +107,7 @@ const downToMatch = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

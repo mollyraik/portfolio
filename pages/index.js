@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Molly Raik</title>
-        <link rel="icon" href="/assets/logo.png" />
+        <link rel="icon" href="/assets/favico.png" />
         <meta name="description" content="Molly Raik's software developer portfolio website" />
       </Head>
       <Navbar />

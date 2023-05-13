@@ -1,10 +1,17 @@
 import Image from "next/image";
+import Head from "next/head";
 import Link from "next/link";
 import { RiRadioButtonFill } from "react-icons/ri";
 import formula1v1img from "../public/assets/projects/formula1v1.png";
 
 const formula1v1 = () => {
   return (
+    <>
+    <Head>
+        <title>Formula 1 v 1</title>
+        <link rel="icon" href="/assets/favico.png" />
+        <meta name="description" content="Project description for Formula 1 v 1 from Molly Raik's software developer portfolio website" />
+    </Head>
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 dark:bg-black/50 z-10"></div>
@@ -98,6 +105,7 @@ const formula1v1 = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 
