@@ -15,8 +15,8 @@ const Projects = () => {
         </p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <Project title='Down to Match' image={dtm} projectUrl='/downtomatch' tech='React JS' />
           <Project title='Will I Be Late?' image={wibl} projectUrl='/willibelate' tech='Django/Python' />
+          <Project title='Down to Match' image={dtm} projectUrl='/downtomatch' tech='React JS' />
           <Project title='Classfolio' image={classfolio} projectUrl='/classfolio' tech='Node/Express' />
           <Project title='Formula 1 v 1' image={formula1v1} projectUrl='/formula1v1' tech='jQuery/HTML/CSS' />
         </div>
