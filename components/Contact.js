@@ -102,6 +102,7 @@ const Contact = () => {
               <div className="rounded-xl hover:scale-105 ease-in duration-300 border-2 border-black">
                 <Image
                   src={molly2}
+                  height={400}
                   alt="portrait of Molly Raik"
                   className="rounded-xl"
                 />
