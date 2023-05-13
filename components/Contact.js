@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import molly from "../public/assets/molly2.png";
+import molly2 from "../public/assets/molly2.png";
 
 const Contact = () => {
   const ContactForm = (
@@ -101,7 +101,7 @@ const Contact = () => {
             <div className="lg:p-4 h-full rounded-xl ">
               <div>
                 <Image
-                  src={molly}
+                  src={molly2}
                   alt="portrait of Molly Raik"
                   className="rounded-xl hover:scale-105 ease-in duration-300 border-2 border-black"
                 />
