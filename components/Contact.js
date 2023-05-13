@@ -92,8 +92,8 @@ const Contact = () => {
   );
 
   return (
-    <div id="contact" className="w-full lg:h-screen py-16">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
+    <div id="contact" className="w-full lg:h-screen pt-16">
+      <div className="max-w-[1240px] m-auto px-2 pt-16 w-full">
         <p className="text-xl tracking-widest uppercase text-pink">Contact</p>
         <h2 className="py-4">Get in Touch</h2>
         <div className="grid md:grid-cols-5 gap-8">

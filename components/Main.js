@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { BsEye, BsDownload } from 'react-icons/bs';
+// import { AiOutlineMail } from "react-icons/ai";
+// import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Main = () => {
   return (
@@ -39,6 +40,12 @@ const Main = () => {
             <a href="https://github.com/mollyraik" target="_blank">
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-orange ease-in duration-300 m-3">
                 <FaGithub size={25}/>
+              </div>
+            </a>
+            <a href="/assets/MollyRaikResume.pdf" download>
+              <div className="flex flex-items-row rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-orange ease-in duration-300 m-3">
+                <p className="mr-2 font-bold">Resume</p>
+                <BsDownload size={25}/>
               </div>
             </a>
           </div>

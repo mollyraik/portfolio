@@ -94,7 +94,7 @@ const Navbar = () => {
                 Contact
               </li>
             </Link>
-            <Link href="/assets/MollyRaikResume.pdf" target="_blank" download>
+            <Link href="/assets/MollyRaikResume.pdf" target="_blank">
               <li className="ml-10 text-sm uppercase hover: border-b">
                 Resume
               </li>
@@ -177,7 +177,7 @@ const Navbar = () => {
                   Contact
                 </li>
               </Link>
-              <a href="/assets/MollyRaikResume.pdf" download>
+              <a href="/assets/MollyRaikResume.pdf" target="_blank">
                 <li onClick={() => setOpen(false)} className="py-4 text-sm">
                   Resume
                 </li>

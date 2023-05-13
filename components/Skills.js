@@ -19,8 +19,8 @@ import tailwind from '../public/assets/skills/tailwind.png';
 
 const Skills = () => {
     return (
-        <div id='skills' className="w-full py-16">
-            <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full px-2 py-16">
+        <div id='skills' className="w-full pt-16">
+            <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full px-2 pt-16">
                 <p className="text-xl tracking-widest uppercase text-pink">Skills</p>
                 <h2 className="py-4">What I Can Do</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-8">
