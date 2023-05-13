@@ -51,6 +51,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <hr className="w-[75%] h-1 mx-auto bg-peach border-0 rounded md:my-10" />
     </div>
   );
 };
