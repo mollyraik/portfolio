@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import molly from "../public/assets/molly2.png";
 
 const Contact = () => {
   const ContactForm = (
@@ -103,9 +104,9 @@ const Contact = () => {
             <div className="lg:p-4 h-full rounded-xl ">
               <div>
                 <img
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                  alt="hands typing on laptop"
+                  className="rounded-xl hover:scale-105 ease-in duration-300 border-2 border-black"
+                  src="/assets/molly2.png"
+                  alt="portrait of Molly Raik"
                 />
               </div>
               <div>
