@@ -1,12 +1,8 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import molly from "../public/assets/molly2.png";
 import Image from "next/image";
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import molly from "../public/assets/molly2.png";
 
 const Contact = () => {
   const ContactForm = (
