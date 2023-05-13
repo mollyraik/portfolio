@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import logo from "../public/assets/logo.png";
+import logo from "../public/assets/biglogo.png";
 import { useRouter } from "next/router";
 // import { Link as ScrollLink } from "react-scroll";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
@@ -69,7 +69,7 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/#home" scroll={false}>
-          <Image src={logo} alt="logo" width={150} />
+          <Image src={logo} alt="logo" width={100} />
         </Link>
         <div>
           <ul style={{ color: `${navText}` }} className="hidden md:flex">
@@ -137,7 +137,7 @@ const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href="/" scroll={false}>
-                <Image src={logo} width={150} alt="logo"></Image>
+                <Image src={logo} width={125} alt="logo"></Image>
               </Link>
               <div
                 onClick={handleClick}
