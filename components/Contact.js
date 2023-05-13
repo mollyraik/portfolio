@@ -99,11 +99,11 @@ const Contact = () => {
         <div className="grid md:grid-cols-5 gap-8">
           <div className="hidden md:inline lg:inline col-span-3 md:col-span-2 w-full h-full shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4 border-2 border-peach">
             <div className="lg:p-4 h-full rounded-xl ">
-              <div>
+              <div className="rounded-xl hover:scale-105 ease-in duration-300 border-2 border-black">
                 <Image
                   src={molly2}
                   alt="portrait of Molly Raik"
-                  className="rounded-xl hover:scale-105 ease-in duration-300 border-2 border-black"
+                  className="rounded-xl"
                 />
               </div>
               <div>
